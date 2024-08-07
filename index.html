@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me pasas tu IG</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e255cb;
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            text-align: center;
+        }
+        .background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #e255cb;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .photo {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .yes-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .no-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+        .result img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .result a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Hola, me pasas tu IG?</h1>
+        <p>Holaa, me llamo Sebastian y me preguntaba si me podias pasar tu IG</p>
+        <div class="background"></div>
+        <img src="img/Hola, me pasa tu insta.jpg" alt="Foto Principal" class="photo">
+        <div class="buttons">
+            <button class="yes-btn" onclick="handleYes()">Sí</button>
+            <button class="no-btn" onclick="handleNo()">No</button>
+        </div>
+        <div class="result" id="resultYes">
+            <a href="https://forms.gle/QH9LYCk6B8AF3nVn8" target="_blank">VISITA ESTE ENLACE</a>
+            <img src="img/Feli.jpg" alt="Foto de Respuesta">
+        </div>
+        <div class="result" id="resultNo">
+            <img src="img/Trite.jpg" alt="Foto de Respuesta No">
+        </div>
+    </div>
+    <script>
+        function handleYes() {
+            document.getElementById('resultYes').style.display = 'block';
+            document.getElementById('resultNo').style.display = 'none';
+        }
+        function handleNo() {
+            document.getElementById('resultNo').style.display = 'block';
+            document.getElementById('resultYes').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
